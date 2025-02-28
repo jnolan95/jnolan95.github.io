@@ -1,0 +1,25 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    About
+{% endblock %}
+
+{% block main %}
+<div class="container mt-4">
+            <p>My name is John Nolan and I have a Bachelor's Degree
+                in Financial Services with a Minor in Economics and 
+                I'm currently applying to Georgia Tech for a Masters
+                 of Science in Analytics. I plan to supplment this Masters
+                  with a MicroMasters in Finance with eventual plans to 
+                  become a Quant</p>
+            <p>Outside of learning, I am passionate about martial arts, traveling, and photography.</p>
+
+            <p>Here is an interactive map with some of the places I've traveled. 
+                Click on the pins to see a gallery of pictures taken by me</p>
+
+            <!-- Include the Map and Gallery -->
+            {% include "map.html" %}
+        </div>
+    </div>
+</div>
+{% endblock %}

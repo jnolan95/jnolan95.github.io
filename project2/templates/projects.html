@@ -1,0 +1,110 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Projects
+{% endblock %}
+
+{% block main %}
+<div class="container mt-4">
+    <div class="row">
+        <!-- Project 1 -->
+        <div class="col-md-6 col-sm-12 mb-4">
+            <div class="card text-center" onclick="handleProjectClick(this, '/healthmetrics')">
+                <div class="card-inner">
+                    <!-- Front Side -->
+                    <div class="card-front">
+                        <img src="{{ url_for('static', filename='healthmetrics.jpg') }}" alt="Health Metrics Project">
+                        <h5 class="card-title mt-2">Health Metrics</h5>
+                    </div>
+                    <!-- Back Side -->
+                    <div class="card-back">
+                        <img src="{{ url_for('static', filename='healthmetrics.jpg') }}" alt="Health Metrics Project">
+                        <div class="card-description">
+                            <p>Passion project where I use Python to track X Health Metrics of myself via Bluetooth and API.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Project 2 -->
+        <div class="col-md-6 col-sm-12 mb-4">
+            <div class="card text-center" onclick="handleProjectClick(this, '/montecarlo')">
+                <div class="card-inner">
+                    <div class="card-front">
+                        <img src="{{ url_for('static', filename='montecarlo.png') }}" alt="Monte Carlo Simulation Project">
+                        <h5 class="card-title mt-2">Monte Carlo Simulation</h5>
+                    </div>
+                    <div class="card-back">
+                        <img src="{{ url_for('static', filename='montecarlo.png') }}" alt="Monte Carlo Simulation">
+                        <div class="card-description">
+                            <p>Article write-up where I analyze implementing a Monte Carlo Simulation</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-6 col-sm-12 mb-4">
+            <div class="card text-center" onclick="handleProjectClick(this, '/sleepanalysis')">
+                <div class="card-inner">
+                    <div class="card-front">
+                        <img src="{{ url_for('static', filename='sleep.avif') }}" alt="Sleep Analysis">
+                        <h5 class="card-title mt-2">Sleep Analysis</h5>
+                    </div>
+                    <div class="card-back">
+                        <img src="{{ url_for('static', filename='sleep.avif') }}" alt="Sleep Analysis">
+                        <div class="card-description">
+                            <p>Analyzing stock trends using Python, Pandas, and Matplotlib.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-6 col-sm-12 mb-4">
+            <div class="card text-center" onclick="handleProjectClick(this, '/project2')">
+                <div class="card-inner">
+                    <div class="card-front">
+                        <img src="{{ url_for('static', filename='project2.jpg') }}" alt="Project 2">
+                        <h5 class="card-title mt-2">Group Project</h5>
+                    </div>
+                    <div class="card-back">
+                        <img src="{{ url_for('static', filename='project2.jpg') }}" alt="Project 2">
+                        <div class="card-description">
+                            <p>Youtube video for a Group Project</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+</div>
+
+
+
+<script>
+    function handleProjectClick(card, url) {
+    if (!card.classList.contains("flipped")) {
+        // First click flips the card
+        card.classList.add("flipped");
+    } else {
+        // If already flipped, navigate immediately
+        window.location.href = url;
+    }
+}
+
+    document.addEventListener("DOMContentLoaded", function () {
+        document.querySelectorAll(".card").forEach(card => {
+            // Flip on hover using CSS only
+            card.addEventListener("click", function () {
+                const url = this.getAttribute("onclick").match(/'([^']+)'/)[1]; // Extract URL
+                if (url) {
+                    window.location.href = url; // Redirect immediately on click
+                }
+            });
+        });
+    });
+</script>
+{% endblock %}
