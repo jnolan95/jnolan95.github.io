@@ -1,0 +1,18 @@
+{
+    "education_methods": {
+        "Bachelor's Degree": ["Time Series Analysis", "Portfolio Management", "Investments", "International Finance"],
+        "Certifications": ["Introduction to Computer Science", "Introduction to Programming with Python"],
+        "MicroMasters": ["Data Analytics for Business", "Introduction to Analytics Modeling", "Computing for Data Analysis"]
+    },
+    "courses": {
+        "Time Series Analysis": [""],
+        "Portfolio Management": [""],
+        "Investments": [""],
+        "International Finance": [""],
+        "Introduction to Computer Science": ["Python", "SQL", "C"],
+        "Introduction to Programming with Python": ["Python"],
+        "Data Analytics for Business": ["R"],
+        "Introduction to Analytics Modeling": ["R"],
+        "Computing for Data Analysis": ["Python", "SQL"]
+    }
+}

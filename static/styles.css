@@ -1,0 +1,218 @@
+/* === Social Media Hover Effects === */
+.navbar-nav .nav-item a[href*="linkedin.com"]:hover {
+  color: #0077B5 !important; /* LinkedIn Blue */
+}
+
+.navbar-nav .nav-item a[href*="github.com"]:hover {
+  color: #171515 !important; /* GitHub Black */
+}
+
+/* Keep social media links inline */
+.navbar-nav.ms-auto {
+  display: flex;
+  gap: 15px;
+}
+
+/* Hide one social link when hovering over another */
+.navbar-nav.ms-auto:hover .nav-item:hover a#linkedin ~ .nav-item a#github {
+  display: none !important;
+}
+
+.navbar-nav.ms-auto:hover .nav-item:hover a#github ~ .nav-item a#linkedin {
+  display: none !important;
+}
+
+/* === Travel Map Styling === */
+#travel-map {
+  height: 500px;
+  width: 100%;
+  border-radius: 10px;
+  margin-top: 20px;
+}
+
+/* === Project Card Flip Effect === */
+.card {
+  perspective: 1000px;
+  cursor: pointer;
+  width: 100%;
+  height: 250px;
+}
+
+.card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+}
+
+.card:hover .card-inner {
+  transform: rotateY(180deg);
+}
+
+.card-front, .card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.card-front {
+  background-color: #fff;
+}
+
+/* Uniform image sizing in project cards */
+.card-front img, .card-back img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.card-back {
+  transform: rotateY(180deg);
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.card-back .card-text {
+  position: absolute;
+  background: rgba(0, 0, 0, 0.6);
+  color: white;
+  padding: 10px;
+  border-radius: 5px;
+  text-align: center;
+  max-width: 90%;
+}
+
+/* === Sidebar Styling === */
+/* === Unified Sidebar Styling for Skills, Coursework, and Concepts === */
+.sidebar, .coursework-sidebar, .concepts-section {
+  background-color: #333;
+  color: white;
+  padding: 20px;
+  border-radius: 10px;
+  min-width: 250px;
+  max-width: 400px;
+  width: 100%;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Sidebar Titles */
+.sidebar h3, .coursework-sidebar h3, .concepts-section h3 {
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+/* Sidebar Lists */
+.sidebar ul, .coursework-sidebar ul, .concepts-section ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  font-size: 18px; /* Ensure all list items use the same font size */
+  font-family: Arial, sans-serif; /* Use a consistent font */
+  font-weight: normal; /* Prevent unexpected bolding */
+}
+
+/* Sidebar List Items - Underlining Effect */
+.sidebar ul li, .coursework-sidebar ul li, .concepts-section ul li {
+  padding: 10px;
+  border-bottom: 1px solid #555;
+  cursor: pointer;
+}
+
+/* Sidebar Hover Effect */
+.sidebar ul li:hover, .coursework-sidebar ul li:hover, .concepts-section ul li:hover {
+  background-color: #555;
+  color: white;
+}
+
+/* === Three-Column Layout for Qualifications === */
+.row.justify-content-center {
+  display: flex;
+  gap: 20px; /* Keeps space between columns */
+  justify-content: center;
+  align-items: flex-start; /* Align columns at the top, so they grow dynamically */
+  flex-wrap: nowrap; /* Prevents stacking on larger screens */
+}
+
+/* Ensure hover description appears below the hovered item */
+.hover-container {
+  position: relative;
+  padding: 5px 0;
+  cursor: pointer;
+}
+
+/* Hide descriptions by default */
+.hover-description {
+  display: none;
+  background-color: #444;
+  color: white;
+  padding: 8px;
+  margin-top: 5px; /* Ensures description appears below hover-item */
+  border-radius: 5px;
+  text-align: left;
+  transition: max-height 0.3s ease-in-out, opacity 0.3s ease-in-out;
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+}
+
+/* Show description and change background color when hovering */
+
+
+/* Keep hover effect for individual items */
+.hover-container:hover {
+  background-color: #007bff !important;
+  color: white !important;
+  transition: background-color 0.3s ease-in-out;
+}
+
+/* Ensure highlighted elements also turn blue */
+.hover-container.highlight {
+  background-color: #007bff !important;
+  color: white !important;
+  transition: background-color 0.3s ease-in-out;
+}
+
+/* Hover Highlight Effect for Linked Items */
+.course-item:hover, .concept-item:hover, .hover-item:hover {
+  background-color: #007bff !important;
+  color: white !important;
+  transition: background-color 0.3s ease-in-out;
+}
+
+/* === Mobile Responsiveness === */
+@media (max-width: 1024px) {
+  .coursework-sidebar, .concepts-section, .sidebar {
+    max-width: 100%;
+  }
+
+  .row.justify-content-center {
+    flex-wrap: wrap;
+  }
+}
+
+/* Highlight all matching items when one is hovered */
+.hover-container.highlight {
+    background-color: #007bff !important; /* Blue background */
+    color: white !important;
+    transition: background-color 0.3s ease-in-out;
+}
+
+/* Ensure highlighted elements match the hover effect */
+.highlight {
+  background-color: #007bff !important;
+  color: white !important;
+  transition: background-color 0.3s ease-in-out;
+}
+

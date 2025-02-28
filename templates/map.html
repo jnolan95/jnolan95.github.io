@@ -1,0 +1,91 @@
+<!-- Leaflet CSS & JS -->
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css" />
+<script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"></script>
+
+    <!-- Map Container -->
+    <div id="travel-map" style="height: 500px;"></div>
+    
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            var map = L.map('travel-map').setView([40, -50], 3); // Global view
+        
+            // Add OpenStreetMap tiles
+            L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                attribution: '&copy; OpenStreetMap contributors'
+            }).addTo(map);
+        
+            // Array of places with multiple images
+            var places = [
+                { 
+                    name: "Rome, Italy", 
+                    coords: [41.8967, 12.4822], 
+                    images: [
+                        "{{ url_for('static', filename='rome/rome1.jpeg') }}",
+                        "{{ url_for('static', filename='rome/rome2.jpeg') }}",
+                        "{{ url_for('static', filename='rome/rome3.jpeg') }}"
+                    ]
+                },
+                { 
+                    name: "Paris, France", 
+                    coords: [48.8566, 2.3522], 
+                    images: [
+                        "{{ url_for('static', filename='paris/paris1.jpeg') }}",
+                        "{{ url_for('static', filename='paris/paris2.jpeg') }}",
+                        "{{ url_for('static', filename='paris/paris3.jpeg') }}"
+                    ]
+                },
+                { 
+                    name: "Munich, Germany", 
+                    coords: [48.1351, 11.5820], 
+                    images: [
+                        "{{ url_for('static', filename='munich/munich1.jpeg') }}",
+                        "{{ url_for('static', filename='munich/munich2.mp4') }}",
+                        "{{ url_for('static', filename='munich/munich3.jpeg') }}"
+                    ]
+                },
+                { 
+                    name: "Nashville, Tennessee", 
+                    coords: [36.1627, -86.7816], 
+                    images: [
+                        "{{ url_for('static', filename='nashville/nashville1.jpeg') }}",
+                        "{{ url_for('static', filename='nashville/nashville2.jpeg') }}",
+                        "{{ url_for('static', filename='nashville/nashville3.jpeg') }}"
+                    ]
+                },
+                { 
+                    name: "St. Louis, Missouri", 
+                    coords: [38.6270, -90.1994], 
+                    images: [
+                        "{{ url_for('static', filename='stlouis/stlouis1.jpeg') }}",
+                        "{{ url_for('static', filename='stlouis/stlouis2.jpeg') }}",
+                        "{{ url_for('static', filename='stlouis/stlouis3.jpeg') }}"
+                    ]
+                }
+                
+            ];
+        
+            // Loop through places and add markers with a single preview image that opens a Fancybox gallery
+            places.forEach(place => {
+                let galleryHtml = `
+                    <b>${place.name}</b><br>
+                    <a href="${place.images[0]}" data-fancybox="gallery-${place.name}" data-caption="${place.name}">
+                        <img src="${place.images[0]}" width="150px" height = "100px" style="border-radius: 5px; cursor:pointer;">
+                    </a>
+                `;
+        
+                // Add hidden links for the rest of the images (Fancybox still registers them)
+                place.images.slice(1).forEach(img => {
+                    galleryHtml += `
+                        <a href="${img}" data-fancybox="gallery-${place.name}" data-caption="${place.name}"></a>
+                    `;
+                });
+        
+                // Create marker with popup containing the image gallery
+                L.marker(place.coords)
+                    .addTo(map)
+                    .bindPopup(galleryHtml);
+            });
+
+            
+        });
+        </script>
