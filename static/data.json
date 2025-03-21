@@ -5,14 +5,13 @@
         "MicroMasters": ["Data Analytics for Business", "Introduction to Analytics Modeling", "Computing for Data Analysis"]
     },
     "courses": {
-        "Time Series Analysis": [""],
-        "Portfolio Management": [""],
-        "Investments": [""],
-        "International Finance": [""],
+        "Time Series Analysis": ["Time Series Forecasting"],
+        "Portfolio Management": ["Portfolio Optimization/Analysis"],
+        "Investments": ["Portfolio Optimization/Analysis", "Financial Analysis"],
         "Introduction to Computer Science": ["Python", "SQL", "C"],
         "Introduction to Programming with Python": ["Python"],
-        "Data Analytics for Business": ["R"],
-        "Introduction to Analytics Modeling": ["R"],
-        "Computing for Data Analysis": ["Python", "SQL"]
+        "Data Analytics for Business": ["R", "Time Series Forecasting", "Portfolio Optimization/Analysis"],
+        "Introduction to Analytics Modeling": ["R", "Time Series Forecasting", "Portfolio Optimization/Analysis"],
+        "Computing for Data Analysis": ["Python", "SQL", "Pandas"]
     }
 }

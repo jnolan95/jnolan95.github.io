@@ -1,10 +1,17 @@
+body {
+  background-color: #06070a;
+  color: #e8e6e3; /* white text for contrast */
+}
+.navbar {
+  background-color: #0e0f10 !important;
+}
 /* === Social Media Hover Effects === */
 .navbar-nav .nav-item a[href*="linkedin.com"]:hover {
   color: #0077B5 !important; /* LinkedIn Blue */
 }
 
 .navbar-nav .nav-item a[href*="github.com"]:hover {
-  color: #171515 !important; /* GitHub Black */
+  color: #fafbfc !important; /* GitHub Black */
 }
 
 /* Keep social media links inline */
@@ -38,6 +45,14 @@
   height: 250px;
 }
 
+.card, .card-inner {
+  background-color: #0e0f10;
+}
+
+.card-front, .card-back {
+  color: #e8e6e3;
+}
+
 .card-inner {
   position: relative;
   width: 100%;
@@ -61,11 +76,9 @@
   align-items: center;
   border-radius: 10px;
   box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+  background-color: #0e0f10;
 }
 
-.card-front {
-  background-color: #fff;
-}
 
 /* Uniform image sizing in project cards */
 .card-front img, .card-back img {
@@ -80,12 +93,13 @@
   position: absolute;
   top: 0;
   left: 0;
+  background-color: #0e0f10;
 }
 
 .card-back .card-text {
   position: absolute;
-  background: rgba(0, 0, 0, 0.6);
-  color: white;
+  background: #181a1b;
+  color: #e8e6e3;
   padding: 10px;
   border-radius: 5px;
   text-align: center;
@@ -95,8 +109,8 @@
 /* === Sidebar Styling === */
 /* === Unified Sidebar Styling for Skills, Coursework, and Concepts === */
 .sidebar, .coursework-sidebar, .concepts-section {
-  background-color: #333;
-  color: white;
+  background-color: #181a1b;
+  color: #e8e6e3;
   padding: 20px;
   border-radius: 10px;
   min-width: 250px;
@@ -133,7 +147,7 @@
 /* Sidebar Hover Effect */
 .sidebar ul li:hover, .coursework-sidebar ul li:hover, .concepts-section ul li:hover {
   background-color: #555;
-  color: white;
+  color: #e8e6e3;
 }
 
 /* === Three-Column Layout for Qualifications === */
@@ -156,7 +170,7 @@
 .hover-description {
   display: none;
   background-color: #444;
-  color: white;
+  color: #e8e6e3;
   padding: 8px;
   margin-top: 5px; /* Ensures description appears below hover-item */
   border-radius: 5px;
@@ -172,22 +186,22 @@
 
 /* Keep hover effect for individual items */
 .hover-container:hover {
-  background-color: #007bff !important;
-  color: white !important;
+  background-color: #004ea3 !important;
+  color: #e8e6e3 !important;
   transition: background-color 0.3s ease-in-out;
 }
 
 /* Ensure highlighted elements also turn blue */
 .hover-container.highlight {
-  background-color: #007bff !important;
-  color: white !important;
+  background-color: 004ea3 !important;
+  color: #e8e6e3 !important;
   transition: background-color 0.3s ease-in-out;
 }
 
 /* Hover Highlight Effect for Linked Items */
 .course-item:hover, .concept-item:hover, .hover-item:hover {
-  background-color: #007bff !important;
-  color: white !important;
+  background-color: #004ea3 !important;
+  color: #e8e6e3 !important;
   transition: background-color 0.3s ease-in-out;
 }
 
@@ -204,14 +218,14 @@
 
 /* Highlight all matching items when one is hovered */
 .hover-container.highlight {
-    background-color: #007bff !important; /* Blue background */
+    background-color: #004ea3 !important; /* Blue background */
     color: white !important;
     transition: background-color 0.3s ease-in-out;
 }
 
 /* Ensure highlighted elements match the hover effect */
 .highlight {
-  background-color: #007bff !important;
+  background-color: #004ea3 !important;
   color: white !important;
   transition: background-color 0.3s ease-in-out;
 }
