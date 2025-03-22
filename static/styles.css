@@ -230,3 +230,25 @@ body {
   transition: background-color 0.3s ease-in-out;
 }
 
+/* Change the popup background and text color */
+.leaflet-popup-content-wrapper {
+  background-color: #181a1b !important;
+  color: #c8c3bc !important;
+}
+
+.leaflet-popup-tip,
+.leaflet-popup-tip:after {
+  background: #181a1b !important;
+}
+
+.leaflet-control-zoom a {
+  background-color: #181a1b !important;
+  color: #c8c3bc !important;
+}
+
+.leaflet-control-attribution {
+  background: #181a1b !important; /* Dark background */
+  color: #c8c3bc !important;       /* Light text */
+  padding: 5px 10px;              /* Optional: add some padding */
+  border-radius: 4px;             /* Optional: round the corners */
+}

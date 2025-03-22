@@ -27,9 +27,9 @@ def coursework():
 def projects():
     return render_template("projects.html")
 
-@app.route("/healthmetrics")
-def healthmetrics():
-    return render_template("healthmetrics.html")
+@app.route("/health_metrics")
+def health_metrics():
+    return render_template("health_metrics.html")
 
 @app.route("/montecarlo")
 def montecarlo():
@@ -38,6 +38,10 @@ def montecarlo():
 @app.route("/sleepanalysis")
 def sleepanalysis():
     return render_template("sleepanalysis.html")
+
+@app.route("/group_project")
+def groupproject():
+    return render_template("group_project.html")
 
 @app.route("/get_data")
 def get_data():

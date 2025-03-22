@@ -9,7 +9,7 @@
     <div class="row">
         <!-- Project 1 -->
         <div class="col-md-6 col-sm-12 mb-4">
-            <div class="card text-center" onclick="handleProjectClick(this, '/healthmetrics')">
+            <div class="card text-center" onclick="handleProjectClick(this, '/health_metrics')">
                 <div class="card-inner">
                     <!-- Front Side -->
                     <div class="card-front">
@@ -20,7 +20,7 @@
                     <div class="card-back">
                         <img src="{{ url_for('static', filename='healthmetrics.jpg') }}" alt="Health Metrics Project">
                         <div class="card-description">
-                            <p>Passion project where I use Python to track X Health Metrics of myself via Bluetooth and API.</p>
+                            <p>A passion project where I use Python to track X Health Metrics of myself via Bluetooth and API.</p>
                         </div>
                     </div>
                 </div>
@@ -45,7 +45,8 @@
             </div>
         </div>
 
-        <div class="col-md-6 col-sm-12 mb-4">
+        <!--Add after you have the sleep analysis-->
+        <!---<div class="col-md-6 col-sm-12 mb-4">
             <div class="card text-center" onclick="handleProjectClick(this, '/sleepanalysis')">
                 <div class="card-inner">
                     <div class="card-front">
@@ -60,19 +61,19 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </div> -->
 
         <div class="col-md-6 col-sm-12 mb-4">
-            <div class="card text-center" onclick="handleProjectClick(this, '/project2')">
+            <div class="card text-center" onclick="handleProjectClick(this, '/group_project')">
                 <div class="card-inner">
                     <div class="card-front">
-                        <img src="{{ url_for('static', filename='group_project.png') }}" alt="Project 2">
-                        <h5 class="card-title mt-2">MGT 6203 Group Project</h5>
+                        <img src="{{ url_for('static', filename='group_project.png') }}" alt="Group Project">
+                        <h5 class="card-title mt-2">Group Project</h5>
                     </div>
                     <div class="card-back">
                         <img src="{{ url_for('static', filename='group_project.png') }}" alt="Leveraging Health Data">
                         <div class="card-description">
-                            <p>MGT 6203 Group Project</p>
+                            <p>A group project for the class Data Analytics for Business</p>
                         </div>
                     </div>
                 </div>

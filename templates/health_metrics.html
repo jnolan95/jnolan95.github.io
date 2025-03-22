@@ -1,0 +1,18 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Health Metrics
+{% endblock %}
+
+{% block main %}
+<h1>Health Metrics</h1>
+<p></p>
+<p>I have been passively collecting health information of the years through various Bluetooth devices. I wear a Garmin most of the time as a watch but it also tracks my Sleep, Heart Rate, and Steps.</p>
+<p>I stumbled upon a Bluetooth water bottle and scale several years ago that pass information along to FitBit.</p>
+<p>In total, I have access to XXX different variables but I realistically only use XXX.</p>
+<p>When I got into Python back in 2023 my curiousity led me to this passion project, formally known as Health Metrics.</p>
+<p>This project accesses Garmin and FitBit APIs (using OAuth tokens as well as opening up a Fitbit webpage to login)</p>
+<p>Ultimately, the code works by creating "Metric" classes, making API calls for every Metric I want to look at, and depending on the range I want to look at (Weekly Report or Monthly Report)</p>
+<p>Code:</p>
+<p>Video:</p>
+{% endblock %}
